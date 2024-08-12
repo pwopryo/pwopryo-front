@@ -6,26 +6,38 @@ export default {
   ],
   theme: {
     fontSize: {
-      xs: ['12px', '16px'],
-      sm: ['14px', '20px'],
-      base: ['16px', '19.5px'],
-      lg: ['18px', '21.94px'],
-      xl: ['20px', '24.38px'],
-      '2xl': ['24px', '29.26px'],
-      '3xl': ['28px', '50px'],
-      '4xl': ['48px', '58px'],
-      '8xl': ['96px', '106px']
+      xs: ['0.75rem', '1rem'], // 12px
+      sm: ['0.875rem', '1.25rem'], // 14px
+      base: ['1rem', '1.5rem'], // 16px
+      lg: ['1.125rem', '1.75rem'], // 18px
+      xl: ['1.25rem', '1.75rem'], // 20px
+      '2xl': ['1.5rem', '2rem'], // 24px
+      '3xl': ['1.875rem', '2.25rem'], // 30px
+      '4xl': ['2.25rem', '2.5rem'], // 36px
+      '5xl': ['3rem', '1'], // 48px
+      '6xl': ['3.75rem', '1'], // 60px
+      '7xl': ['4.5rem', '1'], // 72px
+      '8xl': ['6rem', '1'], // 96px
+      '9xl': ['8rem', '1'], // 128px
     },
     extend: {
       fontFamily: {
-        palanquin: ['Palanquin', 'sans-serif'],
-        montserrat: ['Montserrat', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
+        merriweather: ['Merriweather', 'serif'],
+        lora: ['Lora', 'serif'],
       },
       colors: {
-        'primary': "#ECEEFF",
-        "coral-red": "#FF6452",
-        "slate-gray": "#6D6D6D",
-        "pale-blue": "#F5F6FF",
+        customGray: {
+          100: '#E7E9F2',
+          200: '#CED1D4',
+          300: '#AAADB7',
+          400: '#7F8192',
+          500: '#333333',
+        },
+        primary: {
+          DEFAULT: '#1E3A8A',
+          light: '#22279C',
+        },
         "white-400": "rgba(255, 255, 255, 0.80)"
       },
       boxShadow: {
