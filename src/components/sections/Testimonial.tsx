@@ -5,19 +5,19 @@ const Testimonial = () => {
         {
             avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
             name: "Martin escobar",
-            title: "Founder of meta",
+            title: "Real Estate Agent",
             quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et est hendrerit, porta nunc vitae, gravida justo. Nunc fermentum magna lorem, euismod volutpat arcu volutpat et."
         },
         {
             avatar: "https://randomuser.me/api/portraits/women/79.jpg",
             name: "Angela stian",
-            title: "Product designer",
+            title: "Property Owner",
             quote: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout, that the point of using Lorem Ipsum."
         },
         {
             avatar: "https://randomuser.me/api/portraits/men/86.jpg",
             name: "Karim ahmed",
-            title: "DevOp engineer",
+            title: "Real Estate Agent",
             quote: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati "
         },
     ]
@@ -25,10 +25,10 @@ const Testimonial = () => {
     const [currentTestimonial, setCurrentTestimonial] = useState(0)
 
     return (
-        <section className="py-14">
+        <section className="pb-10">
             <div className="max-w-screen-xl mx-auto px-4 md:px-8">
                 <div className="max-w-3xl mx-auto text-center">
-                    <h3 className="text-indigo-600 font-semibold pb-6">What people are saying</h3>
+                    {/* <h3 className="text-indigo-600 font-semibold pb-6">What people are saying</h3> */}
                     <ul>
                         {
                             testimonials.map((item, idx) => (
@@ -54,6 +54,7 @@ const Testimonial = () => {
                         }
                     </ul>
                 </div>
+
                 <div className="mt-6">
                     <ul className="flex gap-x-3 justify-center">
                         {

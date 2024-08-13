@@ -1,12 +1,13 @@
 import { useState } from "react"
+import { logo1 } from "../../assets/images"
 
 const NavbarWithLinks = () => {
     const [state, setState] = useState(false)
 
     const navigation = [
-        { title: "Trouver des Maisons", path: "javascript:void(0)" },
-        { title: "Publier", path: "javascript:void(0)" },
-        { title: "Explorer", path: "javascript:void(0)" }
+        { title: "Find Home", path: "javascript:void(0)" },
+        { title: "Post a Property", path: "javascript:void(0)" },
+        { title: "Explore", path: "javascript:void(0)" }
     ]
 
     return (
@@ -15,10 +16,10 @@ const NavbarWithLinks = () => {
                 <div className="flex items-center justify-between py-3 md:py-5 md:block">
                     <a href="javascript:void(0)">
                         <img
-                            src="https://www.floatui.com/logo.svg"
+                            src={logo1}
                             width={120}
                             height={50}
-                            alt="Float UI logo"
+                            alt="Pwopryo logo"
                         />
                     </a>
                     <div className="md:hidden">
