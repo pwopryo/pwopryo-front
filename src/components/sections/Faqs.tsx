@@ -3,35 +3,35 @@ import FaqsCard from "../cards/FaqsCard"
 const Faqs = () => {
     const faqsList = [
         {
-            q: "What are some random questions to ask?",
-            a: "That's exactly the reason we created this random question generator. There are hundreds of random questions to choose from so you're able to find the perfect random question."
+            q: "How do I create an account?",
+            a: "To create an eccount, click on the Sign Up button on the top right corner of the page. Fill in the required information and click 'Create Account. You will receive a confirmation email to activate your account."
         },
         {
-            q: "Do you include common questions?",
-            a: "This generator doesn't include most common questions. The thought is that you can come up with common questions on your own so most of the questions in this generator."
+            q: "How can I post a property?",
+            a: "To post a property, log in to your account and click on 'Post property' button. Fill in the details of your property, upload photos and click Submit. Your property will be reviewed and dublished within 24 hours."
         },
         {
-            q: "Can I use this for 21 questions?",
-            a: "Yes! there are two ways that you can use this question generator depending on what you're after. You can indicate that you want 21 questions generated."
+            q: "How do I contact the owner?",
+            a: "To contact the owner of a property go to the property detalls page and click on the 'Contact Owner' button. Fill in your message and click 'Send'. The owner will receive your meresge and get back to you."
         },
         {
-            q: "Are these questions for girls or for boys?",
-            a: "The questions in this generator are gender neutral and can be used to ask either male of females (or any other gender the person identifies with)."
+            q: "How can I edit my property?",
+            a: "To edit your property, log in to your account and go to the dashboard. Find your property in the list and click on the 'Edit' button. Make the necessary changes and click 'Save' your property will be updated."
         },
         {
-            q: "What do you wish you had more talent doing?",
-            a: "If you've been searching for a way to get random questions, you've landed on the correct webpage. We created the Random Question Generator to ask you as many random questions as your heart desires."
+            q: "How do I delete my property?",
+            a: "To delete your property, log in to your account and go to the dashboard. Find your property in the list and click on the 'Delete' button. Confirm the deletion and your property will be permanently removed."
         }
     ]
 
     return (
         <section className="leading-relaxed max-w-screen-xl mt-12 mx-auto px-4 md:px-8">
             <div className="space-y-3 text-center">
-                <h1 className="text-3xl text-gray-800 font-semibold">
+                <h1 className="text-4xl text-gray-800 font-extrabold">
                     Frequently Asked Questions
                 </h1>
-                <p className="text-gray-600 max-w-lg mx-auto text-lg">
-                    Answered all frequently asked questions, Still confused? feel free to contact us.
+                <p className="text-gray-600 max-w-lg mx-auto">
+                    Find answers to frequently asked questions about Pwopryo and how it works.
                 </p>
             </div>
             <div className="mt-14 max-w-2xl mx-auto">

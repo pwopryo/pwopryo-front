@@ -1,7 +1,7 @@
 import HomeHero from "../components/heros/HomeHero"
 import MainNavbar from "../components/navbars/MainNavbar"
 import Categories from "../components/sections/Categories"
-import CTA from "../components/sections/CTA"
+// import CTA from "../components/sections/CTA"
 import Faqs from "../components/sections/Faqs"
 import Footer from "../components/sections/Footer"
 import GridCities from "../components/sections/GridCities"
@@ -15,7 +15,7 @@ const Home = () => {
             <Categories />
             <Testimonial />
             <GridCities />
-            <CTA />
+            {/* <CTA /> */}
             <Faqs />
             <Footer />
         </main>
