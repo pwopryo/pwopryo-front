@@ -5,6 +5,7 @@ export interface PropertyImage {
 }
 
 export interface Property {
+    id: number;
     title: string;
     address: string;
     city: string;
@@ -12,6 +13,9 @@ export interface Property {
     type: string;
     price: number;
     disponibility: string;
+    numBedrooms: number;
+    numBathrooms: number;
+    sqft: number;
     createdAt: string;
     images: PropertyImage[];
 }
