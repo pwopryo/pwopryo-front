@@ -1,8 +1,9 @@
 import { Property } from "../../types/Property";
-import SimplePropertyCard from "../cards/SimplePropertyCard"
+import PropertyCard from "../cards/PropertyCard"
 
 const properties: Property[] = [
     {
+        id: 1,
         title: "Luxurious Beachfront Villa",
         address: "Delmas 19",
         city: "Port-au-Prince",
@@ -10,14 +11,17 @@ const properties: Property[] = [
         type: "Villa",
         price: 500000,
         disponibility: "À louer",
+        numBedrooms: 4,
+        numBathrooms: 3,
+        sqft: 3500,
         createdAt: "2024-08-08T00:34:34.467+00:00",
         images: [
-            { imageUrl: null, isPrimary: true, propertyId: 1 },
-            { imageUrl: null, isPrimary: false, propertyId: 1 },
-            { imageUrl: null, isPrimary: false, propertyId: 1 }
+            { imageUrl: 'https://via.placeholder.com/300', isPrimary: true, propertyId: 1 },
+            { imageUrl: 'https://via.placeholder.com/400', isPrimary: false, propertyId: 1 }
         ]
     },
     {
+        id: 2,
         title: "Modern Apartment in Downtown",
         address: "Rue du Centre",
         city: "Cap-Haïtien",
@@ -25,6 +29,9 @@ const properties: Property[] = [
         type: "Apartment",
         price: 250000,
         disponibility: "À vendre",
+        numBedrooms: 2,
+        numBathrooms: 2,
+        sqft: 1200,
         createdAt: "2024-07-15T10:22:12.123+00:00",
         images: [
             { imageUrl: null, isPrimary: true, propertyId: 2 },
@@ -32,6 +39,7 @@ const properties: Property[] = [
         ]
     },
     {
+        id: 3,
         title: "Cozy Cottage in the Mountains",
         address: "Route de Kenscoff",
         city: "Kenscoff",
@@ -39,6 +47,9 @@ const properties: Property[] = [
         type: "Cottage",
         price: 150000,
         disponibility: "À louer",
+        numBedrooms: 3,
+        numBathrooms: 2,
+        sqft: 1800,
         createdAt: "2024-05-21T14:56:34.467+00:00",
         images: [
             { imageUrl: null, isPrimary: true, propertyId: 3 },
@@ -46,6 +57,7 @@ const properties: Property[] = [
         ]
     },
     {
+        id: 4,
         title: "Charming Villa with Pool",
         address: "Rue Faustin 1er",
         city: "Jacmel",
@@ -53,13 +65,18 @@ const properties: Property[] = [
         type: "Villa",
         price: 600000,
         disponibility: "À vendre",
+        numBedrooms: 5,
+        numBathrooms: 4,
+        sqft: 4000,
         createdAt: "2024-04-10T09:12:34.467+00:00",
         images: [
             { imageUrl: "https://plus.unsplash.com/premium_photo-1689609950112-d66095626efb?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", isPrimary: true, propertyId: 4 },
-            { imageUrl: "https://plus.unsplash.com/premium_photo-1689609950112-d66095626efb?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", isPrimary: false, propertyId: 4 }
+            { imageUrl: "https://plus.unsplash.com/premium_photo-1661908377130-772731de98f6?q=80&w=1412&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", isPrimary: false, propertyId: 4 },
+            { imageUrl: "https://via.placeholder.com/400", isPrimary: false, propertyId: 4 }
         ]
     },
     {
+        id: 5,
         title: "Penthouse with Ocean View",
         address: "Avenue Jean-Paul II",
         city: "Pétion-Ville",
@@ -67,6 +84,9 @@ const properties: Property[] = [
         type: "Penthouse",
         price: 800000,
         disponibility: "À vendre",
+        numBedrooms: 3,
+        numBathrooms: 3,
+        sqft: 3000,
         createdAt: "2024-03-05T13:45:34.467+00:00",
         images: [
             { imageUrl: "https://plus.unsplash.com/premium_photo-1661908377130-772731de98f6?q=80&w=1412&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", isPrimary: true, propertyId: 5 },
@@ -74,6 +94,7 @@ const properties: Property[] = [
         ]
     },
     {
+        id: 6,
         title: "Rustic Farmhouse in the Countryside",
         address: "Route Nationale #1",
         city: "Gonaïves",
@@ -81,6 +102,9 @@ const properties: Property[] = [
         type: "Farmhouse",
         price: 300000,
         disponibility: "À louer",
+        numBedrooms: 4,
+        numBathrooms: 2,
+        sqft: 2500,
         createdAt: "2024-02-14T08:20:34.467+00:00",
         images: [
             { imageUrl: "https://plus.unsplash.com/premium_photo-1661908377130-772731de98f6?q=80&w=1412&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", isPrimary: true, propertyId: 6 },
@@ -88,6 +112,7 @@ const properties: Property[] = [
         ]
     },
     {
+        id: 7,
         title: "Elegant Mansion in the Suburbs",
         address: "Route de Frères",
         city: "Pétion-Ville",
@@ -95,6 +120,9 @@ const properties: Property[] = [
         type: "Mansion",
         price: 1200000,
         disponibility: "À vendre",
+        numBedrooms: 6,
+        numBathrooms: 5,
+        sqft: 5000,
         createdAt: "2024-01-30T11:34:34.467+00:00",
         images: [
             { imageUrl: null, isPrimary: true, propertyId: 7 },
@@ -102,6 +130,7 @@ const properties: Property[] = [
         ]
     },
     {
+        id: 8,
         title: "Chic Loft in the City Center",
         address: "Boulevard Toussaint Louverture",
         city: "Port-au-Prince",
@@ -109,6 +138,9 @@ const properties: Property[] = [
         type: "Loft",
         price: 450000,
         disponibility: "À louer",
+        numBedrooms: 1,
+        numBathrooms: 1,
+        sqft: 900,
         createdAt: "2024-06-12T07:10:34.467+00:00",
         images: [
             { imageUrl: null, isPrimary: true, propertyId: 8 },
@@ -116,6 +148,7 @@ const properties: Property[] = [
         ]
     }
 ];
+
 
 const Categories = () => {
     return (
@@ -143,7 +176,7 @@ const Categories = () => {
             <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:px-8">
                 {
                     properties.map((property: Property) =>
-                        <SimplePropertyCard property={property} />
+                        <PropertyCard property={property} key={property.id} />
                     )
                 }
             </div >

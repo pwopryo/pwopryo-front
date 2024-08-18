@@ -40,6 +40,7 @@ const Faqs = () => {
                         <FaqsCard
                             idx={idx}
                             faqsList={item}
+                            key={idx}
                         />
                     ))
                 }

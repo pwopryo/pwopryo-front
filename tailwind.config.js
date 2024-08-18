@@ -43,6 +43,20 @@ export default {
       boxShadow: {
         '3xl': '0 10px 40px rgba(0, 0, 0, 0.1)'
       },
+      keyframes: {
+        'slideLeft': {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+        'slideRight': {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+      },
+      animation: {
+        'slide-left': 'slideLeft 0.5s ease-in-out forwards',
+        'slide-right': 'slideRight 0.5s ease-in-out forwards',
+      },
       backgroundImage: {
       },
       screens: {
