@@ -16,9 +16,8 @@ const properties: Property[] = [
         sqft: 3500,
         createdAt: "2024-08-08T00:34:34.467+00:00",
         images: [
-            { imageUrl: null, isPrimary: true, propertyId: 1 },
-            { imageUrl: null, isPrimary: false, propertyId: 1 },
-            { imageUrl: null, isPrimary: false, propertyId: 1 }
+            { imageUrl: 'https://via.placeholder.com/300', isPrimary: true, propertyId: 1 },
+            { imageUrl: 'https://via.placeholder.com/400', isPrimary: false, propertyId: 1 }
         ]
     },
     {
@@ -72,7 +71,8 @@ const properties: Property[] = [
         createdAt: "2024-04-10T09:12:34.467+00:00",
         images: [
             { imageUrl: "https://plus.unsplash.com/premium_photo-1689609950112-d66095626efb?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", isPrimary: true, propertyId: 4 },
-            { imageUrl: "https://plus.unsplash.com/premium_photo-1689609950112-d66095626efb?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", isPrimary: false, propertyId: 4 }
+            { imageUrl: "https://plus.unsplash.com/premium_photo-1661908377130-772731de98f6?q=80&w=1412&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", isPrimary: false, propertyId: 4 },
+            { imageUrl: "https://via.placeholder.com/400", isPrimary: false, propertyId: 4 }
         ]
     },
     {

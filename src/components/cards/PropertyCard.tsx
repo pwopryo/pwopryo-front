@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Property } from "../../types/Property";
 import { formatPrice, truncateText } from "../../utils/utils";
 
@@ -7,35 +7,57 @@ interface PropertyCardProps {
 }
 
 const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    const handleNextClick = () => {
+        setCurrentImageIndex((prevIndex) =>
+            prevIndex === property.images.length - 1 ? 0 : prevIndex + 1
+        );
+    };
+
+    const handlePreviousClick = () => {
+        setCurrentImageIndex((prevIndex) =>
+            prevIndex === 0 ? property.images.length - 1 : prevIndex - 1
+        );
+    };
+
     return (
         <div className="flex flex-col bg-white shadow-lg shadow-white border rounded-xl cursor-pointer text-gray-600 font-roboto group">
             <div className="relative w-full">
-                <div className="h-56 overflow-hidden rounded-t-xl">
+                <div
+                    className={`h-56 overflow-hidden rounded-t-xl`}>
                     <img
-                        className="w-full h-full object-cover"
-                        src={property.images[0].imageUrl ? property.images[0].imageUrl : "https://via.placeholder.com/300"}
+                        className={`w-full h-full object-cover`}
+                        src={property.images[currentImageIndex].imageUrl ? property.images[currentImageIndex].imageUrl : "https://via.placeholder.com/300"}
                         alt="Property Image"
                     />
                 </div>
 
                 <div className="absolute top-4 right-4 cursor-pointer transition-all duration-300 hover:scale-110 z-50">
                     <svg
-                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
                     </svg>
                 </div>
 
-                <button type="button" className="absolute top-0 start-0 z-30 justify-center h-full px-3 cursor-pointer flex items-center transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100 hover:scale-110">
+                <button
+                    type="button"
+                    className="absolute top-0 start-0 z-30 justify-center h-full px-3 cursor-pointer flex items-center transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100 hover:scale-110"
+                    onClick={handlePreviousClick}>
                     <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-white">
                         <svg className="w-3 h-3 text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
+                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 1 1 5l4 4" />
                         </svg>
                         <span className="sr-only">Previous</span>
                     </span>
                 </button>
-                <button type="button" className="absolute top-0 end-0 z-30 justify-center h-full px-3 cursor-pointer flex items-center transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100 hover:scale-110">
+
+                <button
+                    type="button"
+                    className="absolute top-0 end-0 z-30 justify-center h-full px-3 cursor-pointer flex items-center transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100 hover:scale-110"
+                    onClick={handleNextClick}>
                     <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-white">
                         <svg className="w-3 h-3 text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4" />
                         </svg>
                         <span className="sr-only">Next</span>
                     </span>
