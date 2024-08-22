@@ -152,8 +152,8 @@ const properties: Property[] = [
 
 const Categories = () => {
     return (
-        <section className="max-w-screen-xl mx-auto py-16">
-            <div className="text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex md:px-8">
+        <section className="max-w-screen-xl mx-auto md:px-8">
+            <div className="text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex">
                 <div className="flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl">
                     <h2 className="text-4xl text-gray-800 font-extrabold md:text-5xl">
                         Categories
@@ -163,7 +163,7 @@ const Categories = () => {
                     </p>
                 </div>
 
-                <div className="flex-none md:mt-0 md:max-w-xl">
+                <div className="flex-none md:mt-0 md:max-w-xl mt-5 px-4 md:px-0">
                     <a href="javascript:void(0)" className="flex items-center justify-center gap-x-2 py-2 px-4 text-gray-700 hover:text-gray-500 font-medium duration-150 active:bg-gray-100 border rounded-lg md:inline-flex">
                         View All
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
@@ -173,7 +173,7 @@ const Categories = () => {
                 </div>
             </div>
 
-            <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:px-8">
+            <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4 md:px-0">
                 {
                     properties.map((property: Property) =>
                         <PropertyCard property={property} key={property.id} />

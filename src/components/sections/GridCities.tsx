@@ -3,7 +3,7 @@ import { artibonite1, center1, grandanse, nippes1, north2, northeast1, northwest
 const GridCities = () => {
     return (
         <section className="bg-white">
-            <div className="py-4 px-2 mx-auto max-w-screen-xl sm:py-4 lg:px-6">
+            <div className="py-4 px-4 mx-auto max-w-screen-xl sm:py-4 lg:px-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 h-full">
                     <div className="col-span-2 sm:col-span-1 md:col-span-2 bg-gray-50 h-auto md:h-full flex flex-col">
                         <a href="" className="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow">
