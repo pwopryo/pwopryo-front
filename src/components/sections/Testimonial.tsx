@@ -25,7 +25,7 @@ const Testimonial = () => {
     const [currentTestimonial, setCurrentTestimonial] = useState(0)
 
     return (
-        <section className="pb-10">
+        <section className="py-10">
             <div className="max-w-screen-xl mx-auto px-4 md:px-8">
                 <div className="max-w-3xl mx-auto text-center">
                     {/* <h3 className="text-indigo-600 font-semibold pb-6">What people are saying</h3> */}

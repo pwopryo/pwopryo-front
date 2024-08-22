@@ -22,7 +22,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
     };
 
     return (
-        <div className="flex flex-col bg-white shadow-lg shadow-white border rounded-xl cursor-pointer text-gray-600 font-roboto group">
+        <div className="flex flex-col bg-white shadow-lg shadow-white border rounded-xl cursor-pointer text-gray-600 font-roboto group overflow-hidden">
             <div className="relative w-full">
                 <div
                     className={`h-56 overflow-hidden rounded-t-xl`}>
@@ -64,8 +64,8 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
                 </button>
             </div>
 
-            <div className="p-4 md:p-5 space-y-2">
-                <div className="flex justify-between">
+            <div className="p-4 md:p-5 space-y-2 flex flex-col flex-grow">
+                <div className="flex justify-between items-center">
                     <h4 className="text-gray-800 text-lg font-extrabold font-merriweather">
                         {formatPrice(property.price)}
                     </h4>
