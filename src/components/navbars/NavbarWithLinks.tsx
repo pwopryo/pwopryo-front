@@ -1,5 +1,7 @@
 import { useState } from "react"
 import { logo1 } from "../../assets/images"
+import Register from '../auth/Register'
+import Login from "../auth/Login"
 
 const NavbarWithLinks = () => {
     const [state, setState] = useState(false)
@@ -9,6 +11,25 @@ const NavbarWithLinks = () => {
         { title: "Post a Property", path: "javascript:void(0)" },
         { title: "Explore", path: "javascript:void(0)" }
     ]
+
+    const [isOpenLoginModal, setOpenLoginModal] = useState(false);
+    const [isOpenRegisterModal, setOpenRegisterModal] = useState(false)
+
+    const handleOpenRegisterModal = () => {
+        setOpenRegisterModal(true)
+    };
+
+    const handleCloseRegisterModal = () => {
+        setOpenRegisterModal(false)
+    };
+
+    const handleOpenLoginModal = () => {
+        setOpenLoginModal(true)
+    };
+
+    const handleCloseLoginModal = () => {
+        setOpenLoginModal(false)
+    };
 
     return (
         <nav className="bg-white border-b w-full md:static md:text-sm ">
@@ -56,15 +77,24 @@ const NavbarWithLinks = () => {
                         <span className='hidden w-px h-6 bg-gray-300 md:block'></span>
                         <div className='space-y-3 items-center gap-x-6 md:flex md:space-y-0'>
                             <li>
-                                <a href="javascript:void(0)" className="block py-3 text-center text-gray-700 hover:text-indigo-600 border rounded-lg md:border-none">
+                            <button
+                                    onClick={handleOpenLoginModal}  
+                                    className="block py-3 text-center text-gray-700 hover:text-indigo-600 border rounded-lg md:border-none"
+                                >
                                     Log in
-                                </a>
+                                </button>
+                                <Login isVisible={isOpenLoginModal} onClose={handleCloseLoginModal} />
                             </li>
                             <li>
-                                <a href="javascript:void(0)" className="block py-3 px-4 font-medium text-center text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 active:shadow-none rounded-lg shadow md:inline">
-                                    Sign in
-                                </a>
+                            <button
+                                onClick={handleOpenRegisterModal}
+                                className="block py-3 px-4 font-medium text-center text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 active:shadow-none rounded-lg shadow md:inline"
+                            >
+                                Sign in
+                            </button>
+                            
                             </li>
+                            <Register isVisible={isOpenRegisterModal} onClose={handleCloseRegisterModal}/>
                         </div>
                     </ul>
                 </div>
