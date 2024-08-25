@@ -38,7 +38,7 @@ const Login: React.FC<LoginProps> = ({ isVisible, onClose }) => {
                     </button>
 
                 </div>
-                <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
+                <h2 className="text-2xl text-gray-500 font-bold mb-6 text-center">Login</h2>
                 <div className="">
                     <form onSubmit={handleLogin} className="flex flex-col gap-4">
                         <input
@@ -61,6 +61,10 @@ const Login: React.FC<LoginProps> = ({ isVisible, onClose }) => {
                         >
                             Login
                         </button>
+                        <div className="flex justify-between mt-4">
+                            <a href="#">Sign In</a>
+                            <a href="#">Forget Password</a>
+                        </div>
                     </form>
                 </div>
             </div>

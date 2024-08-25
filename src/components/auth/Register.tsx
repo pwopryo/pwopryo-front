@@ -61,7 +61,7 @@ const Register: React.FC<RegisterProps> = ({ isVisible, onClose }) => {
                 </button>
             </div>
 
-            <h2 className="text-2xl font-bold mb-4 text-center">
+            <h2 className="text-3xl font-bold mb-4 text-center">
                 {step === 4 ? 'Review & Confirm' : 'Create an Account'}
             </h2>
 
