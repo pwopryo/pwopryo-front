@@ -4,7 +4,7 @@ import Footer from "../components/sections/Footer"
 
 const FindHome = () => {
     return (
-        <main >
+        <main className=" min-h-screen">
             <MainNavbar />
             <FindHomeHero />
             <Footer />
