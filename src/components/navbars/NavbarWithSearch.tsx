@@ -1,35 +1,17 @@
 import { useState } from "react"
 import { logo1 } from "../../assets/images"
-import Register from '../auth/Register'
-import Login from "../auth/Login"
+
 
 const NavbarWithSearch = () => {
     const [state, setState] = useState(false)
+    const [user, setUser] = useState<{ fullName: string; avatar: string } | null>(null);
+
 
     const navigation = [
         { title: "Find Home", path: "javascript:void(0)" },
         { title: "Post a Property", path: "javascript:void(0)" },
         { title: "Explore", path: "javascript:void(0)" }
     ]
-
-    const [isOpenLoginModal, setOpenLoginModal] = useState(false);
-    const [isOpenRegisterModal, setOpenRegisterModal] = useState(false)
-
-    const handleOpenRegisterModal = () => {
-        setOpenRegisterModal(true)
-    };
-
-    const handleCloseRegisterModal = () => {
-        setOpenRegisterModal(false)
-    };
-
-    const handleOpenLoginModal = () => {
-        setOpenLoginModal(true)
-    };
-
-    const handleCloseLoginModal = () => {
-        setOpenLoginModal(false)
-    };
 
     return (
         <nav className="bg-white border-b w-full md:static md:text-sm ">
@@ -75,13 +57,20 @@ const NavbarWithSearch = () => {
                             })
                         }
                         <span className='hidden w-px h-6 bg-gray-300 md:block'></span>
-                       <div>
-                        
-                       </div>
+                        <div className=" pb-3 mt-8 md:block md:pb-0 md:mt-0">
+                            <ul className="justify-end items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
+                                <li className="text-gray-700 hover:text-indigo-600">
+                                    <a href="javascript:void(0)" className="block">{}</a>
+                                </li>
+                                <li className="text-gray-700 hover:text-indigo-600">
+                                    <img src={logo1} alt="Avatar" className="rounded-full w-8 h-8" />
+                                </li>
+                            </ul>
+                        </div>
                     </ul>
                 </div>
-            </div>
-        </nav>
+        </div>
+        </nav >
     )
 }
 

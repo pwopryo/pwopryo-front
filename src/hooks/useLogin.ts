@@ -39,10 +39,10 @@ const useLogin = () => {
 
             console.log('Login attempt with', { email, password });
 
-            // const data: LoginResponse = await response.json();
             const data = await response.json();
            
             localStorage.setItem('user', JSON.stringify(data.data.user));
+          
             onClose();
 
         } catch (error) {
