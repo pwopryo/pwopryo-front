@@ -1,4 +1,5 @@
 import { useState } from "react"
+
 import { logo1 } from "../../assets/images"
 import Register from '../auth/Register'
 import Login from "../auth/Login"
@@ -7,7 +8,7 @@ const NavbarWithLinks = () => {
     const [state, setState] = useState(false)
 
     const navigation = [
-        { title: "Find Home", path: "javascript:void(0)" },
+        { title: "Find Home", path: "/find-home" },
         { title: "Post a Property", path: "javascript:void(0)" },
         { title: "Explore", path: "javascript:void(0)" }
     ]
@@ -35,7 +36,7 @@ const NavbarWithLinks = () => {
         <nav className="bg-white border-b w-full md:static md:text-sm ">
             <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
                 <div className="flex items-center justify-between py-3 md:py-5 md:block">
-                    <a href="javascript:void(0)">
+                    <a href="/">
                         <img
                             src={logo1}
                             width={120}

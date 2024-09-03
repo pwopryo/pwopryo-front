@@ -2,8 +2,8 @@ import { house1, } from "../../assets/images"
 
 const HomeHero = () => {
     return (
-        <section className="py-16 mb-12 relative overflow-hidden">
-            <div className="text-gray-600 gap-x-12 items-center justify-between  md:flex md:px-8 relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
+        <section className="py-16 relative overflow-hidden">
+            <div className=" text-gray-600 gap-x-12 items-center justify-between  md:flex md:px-8 relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
                 <div className="flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl">
                     <h1 className="text-sm text-indigo-600 font-medium">
                         Over 200 successful deals
