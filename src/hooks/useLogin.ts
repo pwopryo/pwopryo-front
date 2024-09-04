@@ -1,17 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useUser } from "../utils/userContext";
 
-
-// interface LoginResponse {
-//     data: {
-//         user: {
-//             id: string;
-//             email: string;
-//             fullName: string;
-//             // Add other user properties as needed
-//         };
-//         avatarUploadUrl: string | null;
-//     }
-// }
 
 const useLogin = () => {
 
@@ -19,9 +8,16 @@ const useLogin = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState<string>('');
 
-    const handleLogin = async (onClose: ()=>void) => {
-      
+    const {user, setUser} = useUser();
 
+
+ useEffect(() => {
+        console.log('User updated:', user);
+    }, [user]);
+
+
+
+    const handleLogin = async (onClose: ()=>void) => {
         try {
             const response = await fetch('http://localhost:3333/auth/login', {
                 method: 'POST',
@@ -40,9 +36,11 @@ const useLogin = () => {
             console.log('Login attempt with', { email, password });
 
             const data = await response.json();
-           
-            localStorage.setItem('user', JSON.stringify(data.data.user));
-          
+            
+            setUser(data.data);
+            console.log(user)
+            localStorage.setItem('user', JSON.stringify(data.data));
+        
             onClose();
 
         } catch (error) {

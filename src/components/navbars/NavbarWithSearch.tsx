@@ -1,11 +1,41 @@
 import { useState } from "react"
+import { useUser } from "../../utils/userContext"
 import { logo1 } from "../../assets/images"
 
 
 const NavbarWithSearch = () => {
-    const [state, setState] = useState(false)
-    const [user, setUser] = useState<{ fullName: string; avatar: string } | null>(null);
+    const [state, setState] = useState(false);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
 
+    const { user, setUser } = useUser();
+
+    const handleLogout = async () => {
+        try {
+            const response = await fetch('http://localhost:3333/auth/logout', {
+                method: 'POST',
+                // credentials: 'include'
+
+            });
+            console.log(response.ok);
+
+            if(response.ok){
+               setUser(null);
+            }
+            else{
+                console.error('Logout failed:', await response.json());
+            }
+        } catch (error) {
+            console.error('Login error:', error);
+        }
+
+ 
+    };
+
+    const toggleDropdown = () => {
+        setDropdownOpen(!dropdownOpen);
+    };
+
+    console.log(user)
 
     const navigation = [
         { title: "Find Home", path: "javascript:void(0)" },
@@ -57,19 +87,36 @@ const NavbarWithSearch = () => {
                             })
                         }
                         <span className='hidden w-px h-6 bg-gray-300 md:block'></span>
-                        <div className=" pb-3 mt-8 md:block md:pb-0 md:mt-0">
-                            <ul className="justify-end items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
-                                <li className="text-gray-700 hover:text-indigo-600">
-                                    <a href="javascript:void(0)" className="block">{}</a>
-                                </li>
-                                <li className="text-gray-700 hover:text-indigo-600">
-                                    <img src={logo1} alt="Avatar" className="rounded-full w-8 h-8" />
-                                </li>
-                            </ul>
+                        <div className="relative">
+                            <button onClick={toggleDropdown} className="flex items-center space-x-2">
+                                <span className="text-gray-700 hover:text-indigo-600">{user?.fullName}</span>
+                                <img src={logo1} alt="Avatar" className="rounded-full w-8 h-8" />
+                            </button>
+                            {dropdownOpen && (
+                                <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg">
+                                    <ul>
+                                        <li>
+                                            <button
+                                                className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100"
+                                            >
+                                                Profile
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button
+                                                onClick={handleLogout}
+                                                className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100"
+                                            >
+                                                Logout
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            )}
                         </div>
                     </ul>
                 </div>
-        </div>
+            </div>
         </nav >
     )
 }

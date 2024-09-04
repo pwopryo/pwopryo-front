@@ -5,12 +5,13 @@ import FindHome from "./pages/FindHome";
 function App() {
 
   return (
-    <>
+  
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path="/find-home" element={<FindHome/>} />
+        <Route path="/find-home" element={<FindHome />} />
       </Routes>
-    </>
+
+
   )
 }
 
