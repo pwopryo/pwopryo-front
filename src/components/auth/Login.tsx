@@ -59,17 +59,20 @@ const Login: React.FC<LoginProps> = ({ isVisible, onClose }) => {
                             onChange={(e) => setPassword(e.target.value)}
                             required
                         />
-                         {error && <p className="text-red-500 text-center mt-2">{error}</p>}
+                        <div className="flex justify-end gap-4 items-center">
+                            <a href='#' className="text-indigo-600 hover:underline">Forgot password?</a>
+
+                        </div>
+                        {error && <p className="text-red-500 text-center mt-2">{error}</p>}
                         <button
                             type='submit'
                             className="w-full py-2 px-4 bg-indigo-600 text-white font-semibold rounded-md shadow hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-400"
                         >
                             Login
                         </button>
-                        <div className="flex justify-between mt-4">
-                            <a href="#">Sign In</a>
-                            <a href="#">Forget Password</a>
-                        </div>
+
+                        <p className='text-center'>Don't have an account? <a href="#" className="text-indigo-600 hover:underline">Sign In</a></p>
+
                     </form>
                 </div>
             </div>
