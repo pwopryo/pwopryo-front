@@ -9,4 +9,6 @@ const MainNavbar:  React.FC = () => {
     return user ? <NavbarWithSearch /> : <NavbarWithLinks />   
 }
 
+
+
 export default MainNavbar

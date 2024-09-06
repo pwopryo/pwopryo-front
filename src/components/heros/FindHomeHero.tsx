@@ -8,7 +8,7 @@ const FindHomeHero = () => {
                     <h2 className="text-4xl text-gray-800 font-extrabold md:text-5xl">
                         Do a Search for your Next Home.
                     </h2>
-                    <div className="mt-8 flex items-center border border-gray-300 rounded-xl shadow-sm focus-within:ring-2 focus-within:ring-indigo-600 focus-within:border-indigo-600 ">
+                    <div className="flex items-center border border-gray-300 rounded-xl shadow-sm focus-within:ring-2 focus-within:ring-indigo-600 focus-within:border-indigo-600 ">
                         <input placeholder="Enter an Address, City or ZIP code"
                             className="w-full p-4 text-lg rounded-l-xl focus:outline-none"
                             type="search"

@@ -78,8 +78,8 @@ const NavbarWithLinks = () => {
                         <span className='hidden w-px h-6 bg-gray-300 md:block'></span>
                         <div className='space-y-3 items-center gap-x-6 md:flex md:space-y-0'>
                             <li>
-                            <button
-                                    onClick={handleOpenLoginModal}  
+                                <button
+                                    onClick={handleOpenLoginModal}
                                     className="block py-3 text-center text-gray-700 hover:text-indigo-600 border rounded-lg md:border-none"
                                 >
                                     Log in
@@ -87,15 +87,14 @@ const NavbarWithLinks = () => {
                                 <Login isVisible={isOpenLoginModal} onClose={handleCloseLoginModal} />
                             </li>
                             <li>
-                            <button
-                                onClick={handleOpenRegisterModal}
-                                className="block py-3 px-4 font-medium text-center text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 active:shadow-none rounded-lg shadow md:inline"
-                            >
-                                Sign in
-                            </button>
-                            
+                                <button
+                                    onClick={handleOpenRegisterModal}
+                                    className="block py-3 px-4 font-medium text-center text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 active:shadow-none rounded-lg shadow md:inline"
+                                >
+                                    Sign in
+                                </button>
                             </li>
-                            <Register isVisible={isOpenRegisterModal} onClose={handleCloseRegisterModal}/>
+                            <Register isVisible={isOpenRegisterModal} onClose={handleCloseRegisterModal} />
                         </div>
                     </ul>
                 </div>

@@ -18,30 +18,32 @@ const NavbarWithSearch = () => {
             });
             console.log(response.ok);
 
-            if(response.ok){
-               setUser(null);
+            if (response.ok) {
+                setUser(null);
             }
-            else{
+            else {
                 console.error('Logout failed:', await response.json());
             }
         } catch (error) {
             console.error('Login error:', error);
         }
-
- 
     };
 
     const toggleDropdown = () => {
         setDropdownOpen(!dropdownOpen);
     };
 
-    console.log(user)
-
     const navigation = [
         { title: "Find Home", path: "javascript:void(0)" },
         { title: "Post a Property", path: "javascript:void(0)" },
         { title: "Explore", path: "javascript:void(0)" }
     ]
+
+    const dropdownItems = [
+        { title: "Profile", },
+        { title: "Logout", action: handleLogout }
+    ];
+
 
     return (
         <nav className="bg-white border-b w-full md:static md:text-sm ">
@@ -93,23 +95,20 @@ const NavbarWithSearch = () => {
                                 <img src={logo1} alt="Avatar" className="rounded-full w-8 h-8" />
                             </button>
                             {dropdownOpen && (
-                                <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg">
+                                <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-50">
                                     <ul>
-                                        <li>
-                                            <button
-                                                className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100"
-                                            >
-                                                Profile
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button
-                                                onClick={handleLogout}
-                                                className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100"
-                                            >
-                                                Logout
-                                            </button>
-                                        </li>
+                                        {
+                                            dropdownItems.map((item, idx) => (
+                                                <li key={idx}>
+                                                    <button
+                                                        onClick={item.action}
+                                                        className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100"
+                                                    >
+                                                        {item.title}
+                                                    </button>
+                                                </li>
+                                            ))
+                                        }
                                     </ul>
                                 </div>
                             )}
