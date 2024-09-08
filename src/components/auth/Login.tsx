@@ -47,7 +47,7 @@ const Login: React.FC<LoginProps> = ({ isVisible, onClose }) => {
 
                 </div>
                 <h2 className="text-2xl text-gray-500 font-bold mb-6 text-center">Login</h2>
-                <div className="">
+                <div>
                     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                         <input
                             type="email"

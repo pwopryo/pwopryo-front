@@ -9,7 +9,7 @@ interface ConfirmationProps {
 const Confirmation: React.FC<ConfirmationProps> = ({ formData }) => {
     return (
         <div className="p-6">
-        <h2 className="text-2xl font-semibold text-gray-500 mb-4 text-center">Confirm Your Details</h2>
+        {/* <h2 className="text-2xl font-semibold text-gray-500 mb-4 text-center">Confirm Your Details</h2> */}
         <div className="space-y-4">
             <p className="text-lg"><span className="font-medium">Full Name:</span> {formData.fullName}</p>
             <p className="text-lg"><span className="font-medium">Email:</span> {formData.email}</p>
