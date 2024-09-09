@@ -9,7 +9,7 @@ interface PersonalInfoProps {
 const PersonalInfo: React.FC<PersonalInfoProps> = ({ formData, setFormData }) => {
     return (
         <div>
-            {/* <h2 className='text-2xl text-gray-500 font-bold'>Personal Info</h2> */}
+            <h2 className='text-2xl text-gray-500 font-bold'>Personal Info</h2>
             <form className="flex flex-col gap-4">
                 <input type="text"
                     className="p-2 mt-8 rounded-xl border"

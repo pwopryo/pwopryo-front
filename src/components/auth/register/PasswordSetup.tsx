@@ -23,7 +23,7 @@ const PasswordSetup: React.FC<PasswordSetupProps> = ({ formData, setFormData }) 
 
     return (
         <div>
-            {/* <h2 className='text-2xl text-gray-500 font-bold'>Password Setup</h2> */}
+            <h2 className='text-2xl text-gray-500 font-bold'>Password Setup</h2>
             <form className="flex flex-col gap-4">
 
                 <div className='relative'>
