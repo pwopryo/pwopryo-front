@@ -1,6 +1,6 @@
 # Pwopryo Frontend
 
-This repository contains the frontend code for the Pwopryo application, a platform designed to simplify the process of renting and leasing properties in Haiti. 
+This repository contains the frontend code for the Pwopryo application, a platform designed to simplify the process of renting and leasing properties. 
 
 ## Technologies
 
